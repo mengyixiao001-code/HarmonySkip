@@ -1,0 +1,20 @@
+**/oh_modules/
+**/.hvigor/
+**/.idea/
+**/.preview/
+**/build/
+**/local.properties
+**/*.p12
+**/*.p7b
+**/*.cer
+**/*.csr
+**/.sign/
+**/build-profile.local.json5
+# Local builds may write developer signing material here.
+Assistant/build-profile.json5
+Fixture/build-profile.json5
+
+# Local validation packages and Python caches.
+/验证包/
+**/__pycache__/
+**/*.pyc

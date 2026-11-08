@@ -1,0 +1,144 @@
+{
+  "schema": 1,
+  "revision": 3,
+  "apps": [
+    {
+      "rules": [],
+      "label": "拼多多",
+      "bundle": "com.xunmeng.pinduoduo.hos",
+      "bank": false,
+      "enabled": true,
+      "versions": []
+    },
+    {
+      "rules": [],
+      "label": "淘宝",
+      "bundle": "com.taobao.taobao4hmos",
+      "bank": false,
+      "enabled": true,
+      "versions": []
+    },
+    {
+      "rules": [],
+      "label": "京东",
+      "bundle": "com.jd.hm.mall",
+      "bank": false,
+      "enabled": true,
+      "versions": []
+    },
+    {
+      "rules": [],
+      "label": "中国银行",
+      "bundle": "com.boc.bocsoft.mbs.personal",
+      "bank": true,
+      "enabled": false,
+      "versions": []
+    },
+    {
+      "rules": [],
+      "label": "中国工商银行",
+      "bundle": "com.icbc.harmonyclient",
+      "bank": true,
+      "enabled": false,
+      "versions": []
+    },
+    {
+      "rules": [],
+      "label": "美团",
+      "bundle": "com.sankuai.hmeituan",
+      "bank": false,
+      "enabled": true,
+      "versions": []
+    },
+    {
+      "rules": [],
+      "label": "抖音",
+      "bundle": "com.ss.hm.ugc.aweme",
+      "bank": false,
+      "enabled": true,
+      "versions": []
+    },
+    {
+      "label": "微博",
+      "bundle": "com.sina.weibo.stage",
+      "bank": false,
+      "enabled": true,
+      "versions": [],
+      "rules": [
+        {
+          "key": "weibo.splash",
+          "version": 1,
+          "scene": "微博开屏广告",
+          "must": [{"field": "text", "mode": "exact", "value": "广告"}],
+          "absent": [],
+          "target": [{"field": "text", "mode": "skip", "value": ""}],
+          "maxAttempts": 1,
+          "cooldownMs": 1500,
+          "result": [],
+          "action": "nativeCenter"
+        }
+      ]
+    },
+    {
+      "label": "QQ音乐",
+      "bundle": "com.tencent.hm.qqmusic",
+      "bank": false,
+      "enabled": true,
+      "versions": [],
+      "rules": [
+        {
+          "key": "qqmusic.splash.interactive",
+          "version": 1,
+          "scene": "QQ音乐互动开屏广告",
+          "must": [
+            {
+              "field": "id",
+              "mode": "exact",
+              "value": "topAdText"
+            },
+            {
+              "field": "text",
+              "mode": "exact",
+              "value": "互动广告｜已 WIFI 预加载"
+            }
+          ],
+          "absent": [],
+          "target": [
+            {
+              "field": "text",
+              "mode": "skip",
+              "value": ""
+            }
+          ],
+          "maxAttempts": 2,
+          "cooldownMs": 1500,
+          "result": [],
+          "action": "nativeCenter"
+        }
+      ]
+    }
+  ],
+  "generic": {
+    "key": "builtin.splash",
+    "version": 1,
+    "scene": "开屏",
+    "must": [
+      {
+        "field": "text",
+        "mode": "ad",
+        "value": ""
+      }
+    ],
+    "absent": [],
+    "target": [
+      {
+        "field": "text",
+        "mode": "skip",
+        "value": ""
+      }
+    ],
+    "maxAttempts": 1,
+    "cooldownMs": 1500,
+    "result": []
+  }
+}

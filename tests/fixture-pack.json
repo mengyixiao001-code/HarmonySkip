@@ -1,0 +1,84 @@
+{
+  "schema": 1,
+  "apps": [
+    {
+      "label": "轻跳测试页",
+      "bundle": "local.harmonyskip.fixture",
+      "bank": false,
+      "enabled": true,
+      "versions": [
+        "0.2.0"
+      ],
+      "rules": [
+        {
+          "key": "fixture.layer.1",
+          "version": 1,
+          "scene": "模拟弹窗 1",
+          "must": [
+            {
+              "field": "text",
+              "mode": "exact",
+              "value": "活动广告"
+            }
+          ],
+          "absent": [],
+          "target": [
+            {
+              "field": "id",
+              "mode": "exact",
+              "value": "hs_layer_one"
+            },
+            {
+              "field": "text",
+              "mode": "exact",
+              "value": "关闭"
+            }
+          ],
+          "maxAttempts": 1,
+          "cooldownMs": 1000,
+          "result": [
+            {
+              "field": "text",
+              "mode": "exact",
+              "value": "优惠广告"
+            }
+          ]
+        },
+        {
+          "key": "fixture.layer.2",
+          "version": 1,
+          "scene": "模拟弹窗 2",
+          "must": [
+            {
+              "field": "text",
+              "mode": "exact",
+              "value": "优惠广告"
+            }
+          ],
+          "absent": [],
+          "target": [
+            {
+              "field": "id",
+              "mode": "exact",
+              "value": "hs_layer_two"
+            },
+            {
+              "field": "text",
+              "mode": "exact",
+              "value": "关闭"
+            }
+          ],
+          "maxAttempts": 1,
+          "cooldownMs": 1000,
+          "result": [
+            {
+              "field": "text",
+              "mode": "exact",
+              "value": "广告已关闭"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

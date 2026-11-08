@@ -1,0 +1,10 @@
+{
+  "app": {
+    "bundleName": "local.harmonyskip.fixture",
+    "vendor": "Personal",
+    "versionCode": 2,
+    "versionName": "0.2.0",
+    "icon": "$media:app_icon",
+    "label": "$string:app_name"
+  }
+}
